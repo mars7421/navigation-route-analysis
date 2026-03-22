@@ -1,5 +1,8 @@
 # 🚗 도로 구조 기반 KPI 및 ETA 분석  
-**강남 출발 경로 분석 프로젝트**
+**강남 출발 경로 분석 프로젝트**  
+  
+📊 **Live Dashboard (Streamlit Cloud)**  
+🔗 [Live Demo](https://mars-navigation-route-analysis.streamlit.app/)  
   
 <br>
   
@@ -57,7 +60,7 @@ navigation-route-analysis/
   
 ---  
   
-## 프로젝트 흐름
+## ⬇️ 프로젝트 흐름
 ```text
 목표 정의
       ↓
@@ -112,7 +115,7 @@ ETA 시뮬레이션
   
 👉 도로 구조를 기반으로 **주행 난이도 및 경로 복잡도 정량화**  
   
-- 회전 정의는 각도 기반 단순화 모델로, 실제 내비게이션 로직과 차이가 있을 수 있음
+회전 정의는 각도 기반 단순화 모델로, 실제 내비게이션 로직과 차이가 있을 수 있습니다.  
   
 <br>
   
@@ -325,7 +328,7 @@ ETA를 단순 결과 값이 아닌
   
 ---
   
-## 실행 방법
+## 💻 실행 방법
 ```python
 # 1. 가상환경 생성 및 활성화
 python -m venv venv
