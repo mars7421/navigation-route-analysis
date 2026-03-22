@@ -36,7 +36,27 @@
 <br>
   
 ---  
-    
+  
+## 📁 프로젝트 구조  
+```text
+navigation-route-analysis/
+├─ app/
+│ └─ navigation.py              # Streamlit 대시보드
+├─ data/
+│ └─ route_kpi_analysis.csv     # 분석 저장 데이터
+├─ notebooks/
+│ └─ route_analysis.ipynb       # 분석 노트북
+├── screenshots/
+│ └─ ...(주요 스크린샷 포함)
+├─ .gitignore
+├─ README.md
+└─ requirements.txt  
+```
+  
+<br>  
+  
+---  
+  
 ## 🗺️ 데이터 및 방법론  
   
 ### 1. 도로 네트워크 구축
@@ -155,10 +175,14 @@ ETA = 거리 기반 이동 시간
 아래는 Streamlit에서 구현한 지도 시각화 예시입니다.  
 ![지도 시각화](screenshots/route.png)
   
+<br>
+
 ### 📊 KPI 시각화
 경로별 KPI 비교를 Streamlit 차트로 확인할 수 있습니다.  
 ![KPI 차트](screenshots/bar_chart.png)  
   
+<br>
+
 ### 🔍 KPI-ETA 관계 분석
 Streamlit에서 확인 가능한 주요 KPI-ETA 산점도 예시입니다.
 ![KPI-ETA 산점도](screenshots/scatter_plot.png)  
