@@ -57,6 +57,25 @@ navigation-route-analysis/
   
 ---  
   
+## 프로젝트 흐름
+```text
+목표 정의
+      ↓
+데이터 수집 및 전처리
+      ↓
+KPI 설계
+      ↓
+KPI 분석 및 시각화
+      ↓
+ETA 시뮬레이션
+      ↓
+인사이트 도출 및 서비스 적용
+```
+
+<br>  
+  
+---  
+  
 ## 🗺️ 데이터 및 방법론  
   
 ### 1. 도로 네트워크 구축
@@ -269,19 +288,6 @@ Route Score = ETA + α × Complexity
   
 ---  
   
-## 🛠️ Tech Stack
-- Python  
-- osmnx  
-- networkx  
-- pandas  
-- matplotlib / seaborn  
-- folium  
-- Streamlit  
-  
-<br>
-  
----  
-  
 ## 📌 결론
   
 본 프로젝트는 도로 구조 KPI를 통해  
@@ -298,6 +304,36 @@ ETA를 단순 결과 값이 아닌
   
 ---  
   
+## 🛠️ Tech Stack
+- Python  
+- osmnx  
+- networkx  
+- pandas  
+- matplotlib / seaborn  
+- folium  
+- Streamlit  
+  
+<br>
+  
+---  
+  
 ## 🔥 한 줄 요약
   
-**“도로 구조 KPI를 정의하고, 이를 기반으로 경로 특성과 ETA 구성 요소를 분석한 내비게이션 경로 분석 프로젝트”**
+**“도로 구조 KPI를 정의하고, 이를 기반으로 경로 특성과 ETA 구성 요소를 분석한 내비게이션 경로 분석 프로젝트”**  
+  
+<br>
+  
+---
+  
+## 실행 방법
+```python
+# 1. 가상환경 생성 및 활성화
+python -m venv venv
+source venv/bin/activate   # Windows: venv\Scripts\activate
+
+# 2. 필요 라이브러리 설치
+pip install -r requirements.txt
+
+# 3. Streamlit 실행
+streamlit run app/navigation.py
+```
