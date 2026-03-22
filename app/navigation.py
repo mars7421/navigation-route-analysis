@@ -211,7 +211,11 @@ elif page == "KPI 분석":
     st.dataframe(df)
     st.markdown("""---""")
     st.header("KPI 시각화")
+
+    # KPI 리스트
     kpi_list = ["distance_km", "intersections", "intersection_density", "turns", "complexity_score"]
+
+    # KPI 제목
     kpi_titles = {
         "distance_km":"Route Distance",
         "intersections":"Intersection Count",
@@ -219,24 +223,40 @@ elif page == "KPI 분석":
         "turns":"Turn Count",
         "complexity_score":"Route Complexity Score"
     }
-    for kpi in kpi_list:
-        fig, ax = plt.subplots()
-        ax.set_title(kpi_titles[kpi])
-        ax.bar(df["route"], df[kpi])
-        ax.set_xlabel("Route")
-        if kpi=="distance_km":
-            ax.set_ylabel("Distance (km)")
 
-        elif kpi=="intersection_density":
-            ax.set_ylabel("Intersections per km")
+    # KPI 설명 (추가)
+    kpi_desc = {
+        "distance_km": "경로의 총 이동 거리",
+        "intersections": "경로 내 교차로 수 (degree ≥ 3)",
+        "intersection_density": "km당 교차로 수",
+        "turns": "방향 변화가 ±30° 이상인 회전 수",
+        "complexity_score": "교차로 밀도와 회전 수를 결합한 경로 복잡도 지표"
+    }
 
-        elif kpi=="complexity_score":
-            ax.set_ylabel("Complexity Score")
+    # 👉 KPI 선택 UI (radio 추천)
+    selected_kpi = st.radio("KPI 선택", kpi_list, horizontal=True)
 
-        else:
-            ax.set_ylabel(kpi_titles[kpi])
-        plt.xticks(rotation=45)
-        st.pyplot(fig)
+    # 설명 표시
+    st.markdown(f"**설명:** {kpi_desc[selected_kpi]}")
+
+    # 그래프 생성
+    fig, ax = plt.subplots()
+    ax.set_title(kpi_titles[selected_kpi])
+    ax.bar(df["route"], df[selected_kpi])
+    ax.set_xlabel("Route")
+
+    if selected_kpi == "distance_km":
+        ax.set_ylabel("Distance (km)")
+    elif selected_kpi == "intersection_density":
+        ax.set_ylabel("Intersections per km")
+    elif selected_kpi == "complexity_score":
+        ax.set_ylabel("Complexity Score")
+    else:
+        ax.set_ylabel(kpi_titles[selected_kpi])
+
+    plt.xticks(rotation=45)
+    st.pyplot(fig)
+
 
     st.markdown("""---""")
     st.header("KPI 종합 해석")
