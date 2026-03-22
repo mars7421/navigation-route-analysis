@@ -7,3 +7,4 @@ folium==0.20.0
 streamlit-folium==0.26.2
 seaborn==0.13.2
 numpy==2.4.3
+scikit-learn==1.8.0
