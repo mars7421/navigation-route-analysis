@@ -1,0 +1,9 @@
+,route,distance_km,intersections,intersection_density,turns,left_turns,right_turns,complexity_score
+7,Gangnam → Hanam,19.77,185,9.36,183,89,94,27.66
+5,Gangnam → Seongsu,7.65,79,10.32,77,43,34,18.02
+6,Gangnam → Sadang,5.24,56,10.68,54,22,32,16.08
+4,Gangnam → Gwanghwamun,9.92,81,8.16,79,46,33,16.060000000000002
+3,Gangnam → Yeouido,10.95,76,6.94,74,33,41,14.34
+1,Gangnam → Jamsil,6.78,58,8.56,56,27,29,14.16
+0,Gangnam → Samseong,3.5,37,10.57,35,17,18,14.07
+2,Gangnam → Pangyo,15.0,60,4.0,58,30,28,9.8
